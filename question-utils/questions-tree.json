@@ -1,0 +1,284 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question_text": "Είστε μόνιμος κάτοικος σε Περιφερειακή Ενότητα της Ελλάδας;",
+            "options": [
+                {
+                    "id": 101,
+                    "option_text": "Ναι",
+                    "next_step": 2,
+                    "terminate": false,
+                    "outcome_type": "continue",
+                    "evidences": [
+                        {
+                            "id": 1001,
+                            "required_evidence": "Έγγραφο πιστοποίησης μόνιμης διαμονής (π.χ. βεβαίωση κατοικίας ειδικής χρήσης ή φορολογική δήλωση)"
+                        }
+                    ]
+                },
+                {
+                    "id": 102,
+                    "option_text": "Όχι",
+                    "terminate": true,
+                    "outcome_type": "ineligible",
+                    "termination_reason": "Δεν πληρούται το βασικό κριτήριο της μόνιμης διαμονής σε Περιφερειακή Ενότητα της Ελλάδας."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "question_text": "Είστε πολίτης τρίτης χώρας (εκτός Ε.Ε. και Ελλάδας);",
+            "options": [
+                {
+                    "id": 201,
+                    "option_text": "Ναι",
+                    "next_step": 3,
+                    "terminate": false,
+                    "outcome_type": "continue"
+                },
+                {
+                    "id": 202,
+                    "option_text": "Όχι (Είμαι Έλληνας πολίτης ή πολίτης χώρας Ε.Ε.)",
+                    "next_step": 4,
+                    "terminate": false,
+                    "outcome_type": "continue"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "question_text": "Διαμένετε νόμιμα στην Ελλάδα και έχετε υποστεί ανικανότητα προς εργασία λόγω εργατικού ατυχήματος σε ελληνικό έδαφος;",
+            "options": [
+                {
+                    "id": 301,
+                    "option_text": "Ναι",
+                    "next_step": 4,
+                    "terminate": false,
+                    "outcome_type": "continue",
+                    "evidences": [
+                        {
+                            "id": 1002,
+                            "required_evidence": "Άδεια νόμιμης διαμονής στην Ελλάδα και επίσημο έγγραφο πιστοποίησης ανικανότητας προς εργασία λόγω εργατικού ατυχήματος σε ελληνικό έδαφος"
+                        }
+                    ]
+                },
+                {
+                    "id": 302,
+                    "option_text": "Όχι",
+                    "terminate": true,
+                    "outcome_type": "ineligible",
+                    "termination_reason": "Οι πολίτες τρίτων χωρών απαιτείται να διαμένουν νόμιμα και να έχουν υποστεί ανικανότητα προς εργασία λόγω εργατικού ατυχήματος σε ελληνικό έδαφος."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "question_text": "Είστε ολικά τυφλός/ή;",
+            "options": [
+                {
+                    "id": 401,
+                    "option_text": "Ναι",
+                    "next_step": 8,
+                    "terminate": false,
+                    "outcome_type": "continue",
+                    "evidences": [
+                        {
+                            "id": 1003,
+                            "required_evidence": "Πιστοποιητικό υγειονομικής επιτροπής ή αρμόδιου φορέα που να βεβαιώνει την ολική τυφλότητα"
+                        }
+                    ]
+                },
+                {
+                    "id": 402,
+                    "option_text": "Όχι",
+                    "next_step": 5,
+                    "terminate": false,
+                    "outcome_type": "continue"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "question_text": "Θα μετακινήστε αποκλειστικά με Υπεραστικά ΚΤΕΛ (με υποβολή σχετικής υπεύθυνης δήλωσης);",
+            "options": [
+                {
+                    "id": 501,
+                    "option_text": "Ναι",
+                    "next_step": 8,
+                    "terminate": false,
+                    "outcome_type": "continue",
+                    "evidences": [
+                        {
+                            "id": 1004,
+                            "required_evidence": "Υπεύθυνη δήλωση για αποκλειστική μετακίνηση με Υπεραστικά ΚΤΕΛ"
+                        }
+                    ]
+                },
+                {
+                    "id": 502,
+                    "option_text": "Όχι (επιθυμώ γενική μετακίνηση ή χρήση και άλλων μέσων)",
+                    "next_step": 6,
+                    "terminate": false,
+                    "outcome_type": "continue"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "question_text": "Το ετήσιο ατομικό σας εισόδημα (καθαρό, χωρίς τα προνοιακά επιδόματα ΟΠΕΚΑ) είναι ίσο ή μικρότερο από 23.000€;",
+            "options": [
+                {
+                    "id": 601,
+                    "option_text": "Ναι",
+                    "next_step": 7,
+                    "terminate": false,
+                    "outcome_type": "continue",
+                    "evidences": [
+                        {
+                            "id": 1005,
+                            "required_evidence": "Εκκαθαριστικό σημείωμα φορολογίας εισοδήματος (ατομικό)"
+                        }
+                    ]
+                },
+                {
+                    "id": 602,
+                    "option_text": "Όχι",
+                    "next_step": 10,
+                    "terminate": false,
+                    "outcome_type": "continue"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "question_text": "Το ετήσιο οικογενειακό σας εισόδημα (καθαρό, χωρίς επιδόματα ΟΠΕΚΑ) είναι έως 29.000 € (το όριο προσαυξάνεται κατά 5.600 € για κάθε εξαρτώμενο μέλος με αναπηρία >= 67%);",
+            "options": [
+                {
+                    "id": 701,
+                    "option_text": "Ναι",
+                    "next_step": 8,
+                    "terminate": false,
+                    "outcome_type": "continue",
+                    "evidences": [
+                        {
+                            "id": 1006,
+                            "required_evidence": "Εκκαθαριστικό σημείωμα φορολογίας εισοδήματος (οικογενειακό) και γνωματεύσεις αναπηρίας εξαρτώμενων μελών (αν υπάρχουν)"
+                        }
+                    ]
+                },
+                {
+                    "id": 702,
+                    "option_text": "Όχι",
+                    "next_step": 10,
+                    "terminate": false,
+                    "outcome_type": "continue"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "question_text": "Λαμβάνετε επίδομα ΟΠΕΚΑ για τυφλότητα ή σοβαρή/βαριά νοητική υστέρηση;",
+            "options": [
+                {
+                    "id": 801,
+                    "option_text": "Ναι",
+                    "terminate": true,
+                    "outcome_type": "eligible_full",
+                    "termination_reason": "Δικαιούστε Δωρεάν Μετακίνηση (FREE) καθώς και Δωρεάν Κάρτα Συνοδού (GUIDE_FREE).",
+                    "evidences": [
+                        {
+                            "id": 1007,
+                            "required_evidence": "Απόφαση χορήγησης ή βεβαίωση λήψης επιδόματος από τον ΟΠΕΚΑ για τυφλότητα ή σοβαρή/βαριά νοητική υστέρηση"
+                        }
+                    ]
+                },
+                {
+                    "id": 802,
+                    "option_text": "Όχι",
+                    "next_step": 9,
+                    "terminate": false,
+                    "outcome_type": "continue"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "question_text": "Έχετε γνωμάτευση Υγειονομικής Επιτροπής για τουλάχιστον ένα από τα εξής: τυφλότητα/οπτική αναπηρία >=80%, δείκτη νοημοσύνης <34, νοητική υστέρηση >=80% ή διάχυτες αναπτυξιακές διαταραχές (αυτισμό) >=80%;",
+            "options": [
+                {
+                    "id": 901,
+                    "option_text": "Ναι",
+                    "terminate": true,
+                    "outcome_type": "eligible_full",
+                    "termination_reason": "Δικαιούστε Δωρεάν Μετακίνηση (FREE) καθώς και Δωρεάν Κάρτα Συνοδού (GUIDE_FREE).",
+                    "evidences": [
+                        {
+                            "id": 1008,
+                            "required_evidence": "Γνωμάτευση Υγειονομικής Επιτροπής (ΚΕΠΑ ή άλλης αρμόδιας αρχής) που πιστοποιεί την αντίστοιχη πάθηση και το απαιτούμενο ποσοστό"
+                        }
+                    ]
+                },
+                {
+                    "id": 902,
+                    "option_text": "Όχι",
+                    "terminate": true,
+                    "outcome_type": "eligible_variant",
+                    "termination_reason": "Δικαιούστε Δωρεάν Μετακίνηση (FREE), αλλά δεν πληροίτε τις προϋποθέσεις για Δωρεάν Κάρτα Συνοδού."
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "question_text": "Λαμβάνετε επίδομα ΟΠΕΚΑ για τυφλότητα ή σοβαρή/βαριά νοητική υστέρηση;",
+            "options": [
+                {
+                    "id": 1001,
+                    "option_text": "Ναι",
+                    "terminate": true,
+                    "outcome_type": "eligible_partial",
+                    "termination_reason": "Δικαιούστε Μειωμένο Εισιτήριο 50% (DISCOUNT_50) καθώς και Δωρεάν Κάρτα Συνοδού (GUIDE_FREE).",
+                    "evidences": [
+                        {
+                            "id": 1007,
+                            "required_evidence": "Απόφαση χορήγησης ή βεβαίωση λήψης επιδόματος από τον ΟΠΕΚΑ για τυφλότητα ή σοβαρή/βαριά νοητική υστέρηση"
+                        }
+                    ]
+                },
+                {
+                    "id": 1002,
+                    "option_text": "Όχι",
+                    "next_step": 11,
+                    "terminate": false,
+                    "outcome_type": "continue"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "question_text": "Έχετε γνωμάτευση Υγειονομικής Επιτροπής για τουλάχιστον ένα από τα εξής: τυφλότητα/οπτική αναπηρία >=80%, δείκτη νοημοσύνης <34, νοητική υστέρηση >=80% ή διάχυτες αναπτυξιακές διαταραχές (αυτισμό) >=80%;",
+            "options": [
+                {
+                    "id": 1101,
+                    "option_text": "Ναι",
+                    "terminate": true,
+                    "outcome_type": "eligible_partial",
+                    "termination_reason": "Δικαιούστε Μειωμένο Εισιτήριο 50% (DISCOUNT_50) καθώς και Δωρεάν Κάρτα Συνοδού (GUIDE_FREE).",
+                    "evidences": [
+                        {
+                            "id": 1008,
+                            "required_evidence": "Γνωμάτευση Υγειονομικής Επιτροπής (ΚΕΠΑ ή άλλης αρμόδιας αρχής) που πιστοποιεί την αντίστοιχη πάθηση και το απαιτούμενο ποσοστό"
+                        }
+                    ]
+                },
+                {
+                    "id": 1102,
+                    "option_text": "Όχι",
+                    "terminate": true,
+                    "outcome_type": "eligible_variant",
+                    "termination_reason": "Δικαιούστε Μειωμένο Εισιτήριο 50% (DISCOUNT_50), αλλά δεν πληροίτε τις προϋποθέσεις για Δωρεάν Κάρτα Συνοδού."
+                }
+            ]
+        }
+    ]
+}
